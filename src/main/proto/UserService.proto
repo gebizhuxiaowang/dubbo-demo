@@ -1,0 +1,26 @@
+/**
+ proto3 协议参考：https://developers.google.com/protocol-buffers/docs/proto3
+ */
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "com.example.dubbo.interfaces.user";
+package user.v1;
+
+service UserService {
+    rpc hello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+    string username = 1;
+}
+
+message HelloReply {
+    string age = 1;
+    string username = 2;
+    string hello = 3;
+}
+
+
