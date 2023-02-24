@@ -14,9 +14,11 @@
 ```
 
 ###待处理的问题
-- [x] 预留选中示例
-- [ ] dubbo 3.2.0 以上版本 ，Triple 协议 无法用postman，进行调试
-- [ ] 使用Triple（gRPC）服务端全局异常处理问题
+
+- [X]  预留选中示例
+- [X]  dubbo 3.2.0 以上版本 ，Triple 协议 无法用postman，进行调试； [解决方法](https://github.com/apache/dubbo/issues/11616)
+- [ ]  使用Triple（gRPC）协议，服务端全局异常处理问题
+
 ```shell
 1、 无法捕获自定义异常，
 2、 没找到示例项目

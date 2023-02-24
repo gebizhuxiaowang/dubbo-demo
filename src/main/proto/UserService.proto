@@ -6,8 +6,17 @@ syntax = "proto3";
 import "google/protobuf/empty.proto";
 
 option java_multiple_files = true;
+
 option java_package = "com.example.dubbo.interfaces.user";
-package user.v1;
+
+/**
+java_package 用于java 和 Kotlin 语言，仅在 java 和kotlin中有效，如果未指定则默认用 package 的定义值；
+postman 解析服务路径读取的proto 文件中的 package ,dubbo 3.1.5 及之前，既支持package 前缀访问，又支持option java_package前缀访问；
+dubbo 3.2.0 之后呢，只支持最终生成文件路径访问，java中体现为 option java_package设置的值，就导致postman 调用不通了
+因此：3.2.0 之后，想要使用postman调用 dubbo， package 要和option java_package 设置为一致
+ */
+//package user.v1;
+package com.example.dubbo.interfaces.user;
 
 service UserService {
     rpc hello (HelloRequest) returns (HelloReply) {}

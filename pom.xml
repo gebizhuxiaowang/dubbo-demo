@@ -25,7 +25,7 @@
 		<logback.version>1.2.10</logback.version>
 		<!--dubbo 3.2 依赖的最低fastjson2 版本2.0.20-->
 		<fastjson.version>2.0.24</fastjson.version>
-		<!--TODO 3.2.0-beta.5 版本 无法使用postman 调试？待处理-->
+		TODO 3.2.0-beta.5 版本 无法使用postman 调试？待处理
 <!--		<dubbo.version>3.1.5</dubbo.version>-->
 		<dubbo.version>3.2.0-beta.5</dubbo.version>
 		<dubbo-serialization-protobuf.version>2.7.22</dubbo-serialization-protobuf.version>
