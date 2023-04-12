@@ -1,0 +1,5 @@
+# 参考：https://dubbo.incubator.apache.org/zh/docs3-v2/java-sdk/concepts-and-architecture/service-invocation/
+# 注意事项：如果自定义Filte实现的ClusterFilter ,需要在  META-INF/dubbo/org.apache.dubbo.rpc.cluster.filter.ClusterFilter文件中声明
+#       若自定义实现的是Filter 需要在 META-INF/dubbo/org.apache.dubbo.rpc.Filter 文件中声明
+#       自定义Filter 不能继承BaseFilter,否则在上述两种文件种均不生效（-_-）
+rpcConsumer=com.example.dubbo.filter.DubboConsumerFilter

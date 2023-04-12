@@ -1,9 +1,11 @@
 package com.example.dubbo.grpcservice;
 
 
+import com.example.dubbo.excepiton.BzException;
 import com.example.dubbo.interfaces.user.DubboUserServiceTriple;
 import com.example.dubbo.interfaces.user.HelloReply;
 import com.example.dubbo.interfaces.user.HelloRequest;
+import org.apache.dubbo.common.stream.StreamObserver;
 import org.apache.dubbo.config.annotation.DubboService;
 
 /**
@@ -22,6 +24,17 @@ public class UserServiceImpl extends DubboUserServiceTriple.UserServiceImplBase 
                 .setHello("欢迎")
                 .build();
         return reply;
+    }
+
+    /**
+     * 异常捕获测试
+     * @param request
+     * @return
+     */
+    @Override
+    public HelloReply helloException(HelloRequest request) {
+        throw new BzException(1000, "自定义异常");
+        // return super.helloException(request);
     }
 }
 

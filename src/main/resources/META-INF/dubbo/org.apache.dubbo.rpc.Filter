@@ -1,0 +1,2 @@
+serviceSign=com.example.dubbo.filter.DubboProviderAuthFilter
+dubboException=com.example.dubbo.filter.DubboProviderExceptionFilter

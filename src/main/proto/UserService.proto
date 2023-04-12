@@ -20,6 +20,7 @@ package com.example.dubbo.interfaces.user;
 
 service UserService {
     rpc hello (HelloRequest) returns (HelloReply) {}
+    rpc helloException(HelloRequest) returns (HelloReply) {}
 }
 
 message HelloRequest {

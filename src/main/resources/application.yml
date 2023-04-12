@@ -37,6 +37,7 @@ dubbo:
     port: 40001
   provider:
     token: false
+#    filter: -exception
 
 logging:
   level:
